@@ -1,2 +1,2 @@
-# 29-epc
-29 kettle epc tracking/managment
+# EPC
+This module is developed for 29 Kettle in order to handle the epc tracking it is implamenting

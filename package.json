@@ -1,0 +1,25 @@
+{
+  "name": "epc",
+  "version": "1.0.0",
+  "description": "epc tracking for 29 kettle",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianemcallister/29-epc.git"
+  },
+  "author": "Ian McAllister",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ianemcallister/29-epc/issues"
+  },
+  "homepage": "https://github.com/ianemcallister/29-epc#readme",
+  "dependencies": {
+    "any-to-any": "^4.0.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
