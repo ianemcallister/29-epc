@@ -7,6 +7,8 @@
 const bodyParser	= require('body-parser');
 const express 		= require('express');
 const EPC           = require('./epc');
+const qa			= require('./qa.js');
+const htmlBuilder	= require('./htmlBuilder/app.js');
 
 //return the express object
 var serverApp = express();
@@ -53,13 +55,22 @@ serverApp.use('/', function(req, res, next) {
 
 serverApp.get('/:epcHex', async function(req, res) {
 	//	DEFINE LOCAL VARIABLES
-	var isEPC = (req.params.epcHex.length == 24)
+	var isEPC = qa.isEPC(req.params.epcHex);
+	
 	//	only process actual EPCs
 	if(isEPC) {
+		//	DEFINE LOCAL VARIABLES
+		var responsePage = htmlBuilder.productPage(EPC.unpack(req.params.epcHex));
+
 		console.log('EPC: ', req.params.epcHex, EPC.unpack(req.params.epcHex));
+		//	SEND AFFIRMATIVE RESPONSE
+		//res.sendStatus(200)
+		res.status(200).send(responsePage);
+
+	} else {
+		res.sendStatus(404);
 	}
     
-    res.sendStatus(200);
 });
 
 /*
