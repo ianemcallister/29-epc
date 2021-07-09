@@ -7,6 +7,7 @@
 var fs 		        = require('fs');
 var path 	        = require('path');
 const Handlebars    = require("handlebars");
+const Firebase      = require('../firebase/firebase.js');
 
 //  DEFINE MODULE
 var builder = {
@@ -27,14 +28,26 @@ function _loadTemplate(filepath) {
 /*
 *   PRODUCT PAGE
 */
-function productPage(epcObj) {
+async function productPage(epcData) {
     //  DEFINE LOCAL VARIABLES
-    var HTMLPage = "";
     var htmlSource = _loadTemplate('htmlBuilder/templates/landing.htm');
     var landingTemplate = Handlebars.compile(htmlSource);
+    
+    try {
 
-    //  RETURN
-    return landingTemplate(epcObj);
+        var dbRecord = await Firebase.getUpc(epcData.upc);
+        var data = dbRecord;
+        data.upc = epcData.upc;
+        data.location = epcData.location;
+        data.instance = epcData.instance;
+
+        //  RETURN
+        return landingTemplate(data);
+
+    } catch (error) {
+        console.log('productPage Error: ', error);
+    }
+    
 };
 
 //  EXPORT MODULE

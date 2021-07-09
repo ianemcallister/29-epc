@@ -1,0 +1,73 @@
+{
+    "291152315153" : {
+      "description" : "This is the cooking box",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/kettle-team.appspot.com/o/almonds.png?alt=media&token=b610e9bf-1cf6-486f-aa8f-a800a94a7f10",
+      "title" : "Cooking Box",
+      "gtin": "00291152315153"
+    },
+    "291152512538": {
+        "title": "Electronics Box",
+        "gtin": "00291152512538"
+    },
+    "291152811440": {
+        "title": "Hand Wash Station",
+        "gtin": "00291152811440"
+    },
+    "291152121525": {
+        "title": "Loyalty Sign",
+        "gtin": "00291152121525"
+    },
+    "291152135140": {
+        "title": "Menu Sign",
+        "gtin": "00291152135140"
+    },
+    "291152212094": {
+        "title": "Utility Box",
+        "gtin": "00291152212094"
+    },
+    "291152221126": {
+        "title": "Bulletin Sign",
+        "gtin": "00291152221126"
+    },
+    "291152169145": {
+        "title": "Pint Boxes",
+        "gtin": "00291152169145"
+    },
+    "291152811266": {
+        "title": "Half Pint Boxes",
+        "gtin": "00291152811266"
+    },
+    "291152112134": {
+        "title": "Staged Almonds",
+        "gtin": "00291152112134"
+    },
+    "291152311988": {
+        "title": "Staged Cashews",
+        "gtin": "00291152311988"
+    },
+    "291152812652": {
+        "title": "Staged Hazelnuts",
+        "gtin": "00291152812652"
+    },
+    "291152165314": {
+        "title": "Staged Pecans",
+        "gtin": "00291152165314"
+    },
+    "291152165116": {
+        "title": "Staged Peanuts",
+        "gtin": "00291152165116"
+    },
+    "291152195182": {
+        "title": "Serving Bins Box",
+        "gtin": "00291152195182"
+    },
+    "291152215217": {
+        "title": "Bourbon Cooked Nuts",
+        "gtin": "00291152215217"
+    },
+    "291152192358": {
+        "title": "SS Cooked Nuts",
+        "gtin": "00291152192358"
+    }
+}
+  

@@ -1,0 +1,76 @@
+{
+    "upc": "",
+    "description": "",
+    "name": "",
+    "dimensions": {
+        "l": 13,
+        "w": 10,
+        "h": 10,
+        "units": "in"
+    },
+    "categoryId": "",
+    "category": "IP / Cases",
+    "unitOfMeasure": "Units",
+    "billOfMaterials": {
+        "0": {
+            "upc": "",
+            "title": "BB Supply (Jug)",
+            "qty": "2",
+            "UoM": "Units"
+        },
+        "1": {
+            "upc": "",
+            "title": "SS Supply (Jug)",
+            "qty": "2",
+            "UoM": "Units"
+        },
+        "2": {
+            "upc": "",
+            "title": "Spritzing Squeeze Bottles",
+            "qty": "2",
+            "UoM": "Units"
+        },
+        "3": {
+            "upc": "",
+            "title": "Half Steam Pans",
+            "qty": "6",
+            "UoM": "Units"
+        },
+        "4": {
+            "upc": "",
+            "title": "Oven Mitt",
+            "qty": "1",
+            "UoM": "Units"
+        },
+        "5": {
+            "upc": "",
+            "title": "Salt Shaker (Kirkland)",
+            "qty": "1",
+            "UoM": "Units"
+        },
+        "6": {
+            "upc": "",
+            "title": "Dry Measuring Cup w/ 1 Cup Capacity, Clear (Cambro)",
+            "qty": "1",
+            "UoM": "Units"
+        },
+        "7": {
+            "upc": "",
+            "title": "10\" Wooden Spatula / Turner",
+            "qty": "1",
+            "UoM": "Units"
+        },
+        "8": {
+            "upc": "",
+            "title": "10\" High Temperature Silicone Spatula",
+            "qty": "1",
+            "UoM": "Units"
+        },
+        "9": {
+            "upc": "",
+            "title": "1 Qt. Freezer Storage Bag (Ziploc)",
+            "qty": "1",
+            "UoM": "Units"
+        }
+    }
+}
