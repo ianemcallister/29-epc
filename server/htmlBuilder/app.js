@@ -28,8 +28,9 @@ function _loadTemplate(filepath) {
 /*
 *   PRODUCT PAGE
 */
-async function productPage(epcData) {
+async function productPage(epcData, epcHex) {
     //  DEFINE LOCAL VARIABLES
+    console.log('epcHex: ', epcHex)
     var htmlSource = _loadTemplate('htmlBuilder/templates/landing.htm');
     var landingTemplate = Handlebars.compile(htmlSource);
     
@@ -40,6 +41,7 @@ async function productPage(epcData) {
         data.upc = epcData.upc;
         data.location = epcData.location;
         data.instance = epcData.instance;
+        data.epcHex = epcHex;
 
         //  RETURN
         return landingTemplate(data);
