@@ -40,7 +40,7 @@
 
             <!--Images-->
             <div class="row">
-                <img src="{{image}}" alt="" style='width: 400px; display: block; margin-left: auto; margin-right:auto;'>
+                <img src="{{image}}" alt="" style='width: 300px; display: block; margin-left: auto; margin-right:auto;'>
             </div>
 
 
@@ -61,15 +61,20 @@
                         <div class="card-body">
                             <p>
                                 <strong>Description: </strong>
-                                The cooking box contains all of the cooking tools and supplies to setup the cooking station.
+                                {{description}}
                             </p>
                             
                             <p><strong>Location:</strong> {{location}}</p>
                             <p><strong>Instance:</strong> {{instance}}</p>
+                            <p>
+                                <strong>Dimensions:</strong>
+
+                            </p>
                         </div>
                     </div>
 
                     <!--Components-->
+                    {{#if hasComponents}}
                     <div class="card-header" id='headingTwo'>
                         <h5 class="mb-0">
                             <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
@@ -80,9 +85,39 @@
 
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
-                            The cooking box is composed of the following elements:
+                            This product is composed of the following elements:
+
                         </div>
                     </div>
+                    {{/if}}
+
+                    <!--Cleaning Instructions-->
+                    {{#if isCleanable}}
+                    {{/if}}
+
+                    <!--Packing Instructions-->
+                    {{#if isPackable}}
+                    <div class="card-header" id='headingFour'>
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                Packing/Unpacking
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body">
+                            
+                            {{#if videos.hasPacking}}
+                                <strong>Cleaning</strong>
+                                <iframe width="100%"
+                                        src="{{videos.content.0.url}}">
+                                </iframe>
+                            {{/if}}
+
+                        </div>
+                    </div>
+                    {{/if}}
 
                 </div>
             </div>
