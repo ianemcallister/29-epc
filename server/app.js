@@ -62,7 +62,7 @@ serverApp.get('/:epcHex', async function(req, res) {
 		//	DEFINE LOCAL VARIABLES
 		var responsePage = await htmlBuilder.productPage(EPC.unpack(req.params.epcHex), req.params.epcHex);
 
-		console.log('EPC: ', req.params.epcHex, EPC.unpack(req.params.epcHex));
+		//console.log('EPC: ', req.params.epcHex, EPC.unpack(req.params.epcHex));
 		//	SEND AFFIRMATIVE RESPONSE
 		//res.sendStatus(200)
 		res.status(200).send(responsePage);

@@ -13,6 +13,7 @@
         <!--Styles-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+
     </head>
     <body>
         <div class="container">
@@ -107,12 +108,9 @@
 
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                         <div class="card-body">
-                            
+                            {{packingVideo}}
                             {{#if videos.hasPacking}}
-                                <strong>Cleaning</strong>
-                                <iframe width="100%"
-                                        src="{{videos.content.0.url}}">
-                                </iframe>
+                                
                             {{/if}}
 
                         </div>

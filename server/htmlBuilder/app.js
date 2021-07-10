@@ -36,12 +36,36 @@ async function productPage(epcData, epcHex) {
     
     try {
 
+        //  LOAD DB DATA
         var dbRecord = await Firebase.getUpc(epcData.upc);
         var data = dbRecord;
         data.upc = epcData.upc;
         data.location = epcData.location;
         data.instance = epcData.instance;
         data.epcHex = epcHex;
+
+        console.log('data: ', data);
+
+        //  CHECK FOR VIDEOS
+        if(data.videos != undefined) {
+            
+            //  ITERATE OVER VIDEOS
+            Object.keys(data.videos.content).forEach(function(key) {
+                
+                if(data.videos.content[key].type == 'packing') {
+                    Handlebars.registerHelper("packingVideo", function() {
+                        console.log('runing, video helper');
+                        var url = Handlebars.escapeExpression(data.videos.content[key].url),
+                            text = Handlebars.escapeExpression(data.videos.content[key].description)
+                            
+                       return new Handlebars.SafeString("<iframe id='cleaningVideoFrame' style='display: block; margin-left: auto; margin-right: auto; width:100%; height:300px; ' src='" + url + "'></iframe> <br></br>" + text);
+                    });
+                }
+
+            });
+        }
+        //  BUILD HELPERS
+
 
         //  RETURN
         return landingTemplate(data);
